@@ -1,0 +1,70 @@
+1. Marklist                                        
+2. Marklist_code      				   
+3. fiboUsingFor                                    
+4. fiboUsingWhile 			 	   
+5. ballVertical    		  		   
+6. nFacto              			   	   
+7. nFactorial()     				   
+8. funcsum()       			    	   
+9. plotParabolic     			  	   
+10. plotsincos          			   
+11. McLaurinTruncateError()       	   	   
+12. MatlabPrecision           		  	   
+13.McLaurinTE_using_arrays      		   
+14.Mclaurin_Variation_with_x        		   
+15.numDeriv           		  	           
+16.iterative_error           		  	   
+17.StepWiseMethods      		  	   
+18.stepwise_exception_why      	                   
+19.differentiation_p1      		  	   
+20.higherOrderDerivative                           
+21.prtalderivat                                    
+22.integr_expans                                   
+23.easy_intgra                                     
+24.integr_trapz_func                               
+25.integr_quad_func                                
+26.basic_lnr_algbra                                
+27.gauss_elimn_bk_substi                           
+28.gauss_seidel_method                             
+29.Gauss_seidel                                    
+30.LU_Decomp                                       
+31.Part_piv                                        
+32.Tri_diag_mtrx_thomas_method                     
+33.Thomas_Algorithm_use                            
+34.bisection_method                                
+35.fzero_input_func                                
+36.fzero_func_demo                                 
+37.fixed_point_method                              
+38.Newton_Raphson_single_variable                  
+39.err_New_raph_and_fix_pt                         
+40.sine2xminushalf                                 
+41.lorenz_eqn_fsolve                               
+42.fsolve_sngl_var                                 
+43.Lorenzoeq                                       
+44.jac_F                                           
+45.Newton_Rson_mlti_vari                           
+46.simpsons_rule
+47.hyp_trig_functions
+48.y_Dash1
+49.eulerExplicit
+50.eularImplicit
+51.rkMethods
+52.ode45_y_Dash1
+53.PFRfun
+54.runPFRfun
+55.massSpringFun
+56.SolveMassSpring
+57.RK4massSpring
+58.ode45_to_ode15s
+59.rod_temp
+60.rodHeatProblem
+61.stiffSfun
+62.lsq_fun
+63.linear_regression_and_interpolated_curve_intro
+64.nonlin_regression
+65.Helicopter_shot
+66.dhonisixes
+67.fft_of_sin
+68.fft_frequency_and_phase
+69.plot_animate
+70.sindynamic
