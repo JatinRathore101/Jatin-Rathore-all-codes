@@ -1,0 +1,106 @@
+git status  =>  tells current status of files in current git repository (current folder)
+
+pwd => shows present working directory
+
+ls => list content in which folder we are working
+
+cd => change directory
+
+git init => initilizes curent folder as git repository and creates a hidden  .git  folder in that repository
+
+git add file_name.xyz => stages file_name.xyz 
+
+git add --a => puts all untracked or modified(red highlighted) files inside the current git repositoryto staging area
+
+git commit -m "......text ....." => commits all files resting in staging area
+
+git log => tells about all commits performed, when and in which file and by whom
+
+rm -rf .git => stops tracking current folder, folder no longer remains a git repository and  .git  folder is deleted
+
+git clone "url" => creates new directory and clones all files inside it
+
+git clone "url" new_folder_name => creates new directory with given folder name and clones all files inside it
+
+touch file_name.xyz => generates file_name.xyz in the working repository
+
+touch .gitignore => creates  .gitignore file in the git repository
+now whichever file name we type and save inside  .gitignore file, that file will be completely ignored (not tracked) by git
+typing and saving  file_name.xyz  or directory name abc_dir  inside  .gitignore => any number of files file with file name file_name.xyz or any directory with directory name abc_dir, any where inside the git repository are no longer tracked
+typing and saving  *.xyz  inside  .gitignore => any file with  .xyz extension inside our git repository is no longer tracked
+
+git rm --ch=ached file_name.xyz => to untrack the file in case the  .gitignore feature does not works
+
+git diff => compares working directory files (modified) from staging area files (staged)
+if all files staged git diff shows nothing
+
+git diff --staged => compares last commit from current staged files
+
+git commit -a -m "text" => directly commits all modified files
+staging is not required
+but if any file is new (untracked) => it has to be specifically added (staged) then commited
+
+git rm filename.xyz => removes file_name.xyz (deletes it) from the git repository, and it automatically stages this deletion
+
+git mv  old_name.xyz  new_name.xyz  => renames  old_name.xyz  as  new_name.xyz  , also automatically stages this rename change
+
+git rm --ch=ached file_name.xyz => to untrack the file in case the  .gitignore feature does not works
+
+git restore --staged file_name.xyz => removes this file from staging are back to unstaged modified state 
+
+git checkout -- file_name.xyz => restores last commit version of file_name.xyz in it
+
+git checkout -f => restores last commit version for all files in current git repository
+
+git config --global alias.new_short_name    'old name of old long command' => now we can refer to our old long command by just new_short_name
+
+
+
+working on remote repositories - repositories hosted over github etc.
+-go to github
+-create github account
+-create a new repository
+
+git remote add xyz  link => executes if git repository already exists, xyz is the name given by us to the remote server, link is the link of remote server over which we are hosting the versions of are our git repository
+
+git remote => check if remote exist for the current repository, gives xyz(from above command) as output
+
+github push access key 
+=> setting -> SSH and GPG keys
+create SSH key in git for windows and then paste key in github website
+
+git push -u xyz master => pushes the repository to github after key is added
+
+to paste something in git use  shift+insert  
+
+git branching - main branch is (master)
+
+git checkout -b branch_name => creates and enters in new branch with name (branch_name) from (master) branch
+
+git checkout master => switch to master branch
+
+git checkout branchname => switch to another branchname
+
+git branch => shows all existing braches 
+
+git merge branch_name => use this command in presence of vscode to  resolve conflict codes while merging 
+after that add and commit finally
+
+
+
+
+
+
+
+
+till lecture 16 watched in cwh git playlist
+
+
+
+
+
+
+
+
+
+
