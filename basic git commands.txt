@@ -85,22 +85,3 @@ git branch => shows all existing braches
 
 git merge branch_name => use this command in presence of vscode to  resolve conflict codes while merging 
 after that add and commit finally
-
-
-
-
-
-
-
-
-till lecture 16 watched in cwh git playlist
-
-
-
-
-
-
-
-
-
-
