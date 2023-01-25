@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Queries</title>
+    <style>
+
+    /* @media screen and (max-width: 800px)
+    {
+    #contents{width:90%}
+    }
+
+    Let's understand this example :
+
+    @media: A media query always starts with @media.
+    Screen: It is the applicable media type.
+    max-width: It is the media feature. 
+    #contents{width:90%} : It is the CSS to be applied when the conditions are met. */
+
+
+        .box{
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        /* whenever a media query becomes true then the display value of that box 
+        will be changed from display:none; to display:block; and applied CSS will 
+        be visible to the user */
+
+        @media only screen and (max-width:300px){
+            #box-1{
+                display: block;
+                background-color: rgb(126, 77, 126);
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            #box-2{
+                display: block;
+                background-color: rgb(231, 67, 95);
+            }
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+            #box-3{
+                display: block;
+                color: black;
+                background-color: rgb(255, 167, 167);
+            }
+        }
+
+        @media (min-width: 800px)  {
+            #box-4{
+                display: block;
+                background-color: rgb(255, 166, 0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">iPhone</div>
+    <div class="box" id="box-2">iPad</div>
+    <div class="box" id="box-3">Mac</div>
+    <div class="box" id="box-4">PC</div>
+</body>
+</html>

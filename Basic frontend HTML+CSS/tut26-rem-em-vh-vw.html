@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem, em, vh, vw</title>
+
+    <style>
+
+        html{font-size: 15px;}
+
+        .ssheading{
+            text-align: center;
+            border: 1px solid orange;
+            color: blue;
+        }
+
+
+        #container{font-size: 20px;}
+
+        #h1{font-size: 3em;}
+        /* em is font-size inherited relative to the parent element.
+        10em means ten times of the parent element. */
+
+        #h2{font-size: 3rem;}
+        /* rem is font-size according to the font-size of the root element.
+        In general, <html> is the root element.
+        In rem, "r" stands for "root." */
+
+        #h3{font-size: 8vh;}
+        /* vh stands for viewport height.
+        vh is equal to the 1/100 times of the viewport height.
+        Example: Suppose height of the browser is 1000px, so 1vh is equaled to (1/100)*1000= 10px. */
+
+        #h4{font-size: 7vw;}
+        /* vw stands for viewport width.
+        Similar to vh, vw is equal to the 1/100 times of the viewport width.
+        Example: Suppose width of the browser is 1000px, so 1vw is equaled to (1/100)*1000= 10px. */
+
+            
+
+    </style>
+    
+</head>
+<body>
+    <div id="container">
+        
+    <h2 class="ssheading" id="h1">Lorepsum dolor sit amet consectetur adipisicii Dictquas.</h2>
+    <h2 class="ssheading" id="h2">Lorepsum dolor sit amet consectetur adipisicii Dictquas.</h2>
+    <h2 class="ssheading" id="h3">Lorepsum dolor sit amet consectetur adipisicii Dictquas.</h2>
+    <h2 class="ssheading" id="h4">Lorepsum dolor sit amet consectetur adipisicii Dictquas.</h2>
+
+    </div></body>
+</html>

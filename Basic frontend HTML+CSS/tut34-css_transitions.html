@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transitions</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    #box{
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        /* transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 2s; */
+
+        /* Transition short hand property in one line For example, 
+        if we want to transition background color, then we have to write-*/
+        /* transition: background-color 1s ease-in-out 2s; */
+
+        /* If we want all the properties should go under transition, 
+        then we can write-
+        Here, all the properties will get changed accordingly and you 
+        witness some good transitions. All those properties that can 
+        change their values like colors, can show different transition 
+        properties. You can try different such properties and view the 
+        effects of these transitions. 
+        for all changes you must add multiple properties in :hover  */
+        transition: all 1s ease-in-out .3s;
+    }
+    
+    #box:hover{
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+
+    }
+
+</style>
+<body>
+    <h3>This is CSS Transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>

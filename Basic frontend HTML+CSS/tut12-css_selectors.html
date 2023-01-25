@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                   <!-- CSS GENERAL SYNTAX =>    SELECTOR{PROPERTY:VALUE;} -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors in CSS</title>
+    
+    <!-- 
+    types 
+    -CSS tag or element selectors
+    -CSS id selectors
+    -CSS class selectors
+    -CSS grouping selector
+    -->
+
+    <style>
+    
+        /* CSS element selectors */ 
+        h3{background-color: rgb(174, 221, 221);}
+
+        /* CSS element selectors */
+        h2{background-color: rgb(168, 221, 161);}
+
+        /* CSS class selectors */
+        .EVen{background-color: rgb(147, 153, 204);}
+        /* This overwrites class EVen for p of id="two" */
+
+        /* CSS class selectors */
+        .purpleTEXt{color: rgb(145, 8, 187);}
+
+        /* CSS id selectors */
+        #two{background-color: rgb(197, 135, 189);} 
+        /* This overwrites class EVen for p of id="two" */
+
+        /* CSS id selectors */
+        #seven{background-color: rgb(184, 116, 120);}
+    
+        /* CSS grouping selectors */
+        footer, #one, .Aroma{color:rgb(60, 255, 0)}
+
+    </style>
+
+
+</head>
+<body>
+    <h3 id="one" class="purpleTEXt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+
+    <p class="EVen purpleTEXt Aroma" id="two"> distinctio saepe quas consequatur necessitatibus! Recusandae suscipit magnam impedit voluptas odit adipisci sapiente fugiat, velit, officiis dignissimos.</p>
+    
+    <p id="three">ut odio quae non, laboriosam iusto eum magnam nemo repudiandae, earum, tenetur ipsa qui optio nostrum consectetur quod doloribus vel, id</p>
+    
+    <h2 class="EVen Aroma" id="four">perferendis amet iure repudiandae temporibus porro ipsa</h2>
+    
+    <p id="five" class="purpleTEXt">doloribus, reprehenderit exercitationem itaque vel asperiores deleniti fugiat ijdcs dcwsc veritatis quibusdam, earum blanditiis, perspiciatis</p>
+    
+    <p class="EVen" id="six">dolorum tempore quam cupiditate consequatur, adipisci expedita alias, whuihswsw aliquid wqednaijo doloribus velit. Optio delectus rerum debitis</p>
+    
+    <p id="seven">Nesciunt accusantium pariatur laboriosam omnis numquam assumenda maxime quisquam hsuhwpdwddw repudiandae a aperiam veniam odit quaerat</p>
+
+    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, atque culpa</footer>
+
+</body>
+</html>
+
+<!-- Browser's INSPECT,{ inspector => HTML  ,  console => JS  ,  style editor => CSS } feature is very helpful while editing the appearance of website while webdesigning -->
+<!-- CSS Tutorial: Using Chrome Developer Tools | Web Development Tutorials #16  //  https://youtu.be/buxedopZbKM?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg  // -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDs and Classes</title> 
+    <!-- ID => identifier attribute => not compulsory to be defined, but if defined then unique for a tag , two tags can't have same IDs , CSS and JS can access any tag just by its ID name -->
+    <!-- class => user defined group of properties which can be provided to multiple tags just by inserting that class name as attribute --> 
+    <!-- a tag can have only single and unique ID , it can have multiple shared and non unique classes -->
+</head>
+<body>
+    
+    <h3>Id and classes tutorial</h3>
+    
+    <!-- Emmet shortcuts for ID and classes => dot # is for id and . is for classes => if we wish to avoid manually typing all these text -->
+    
+    <!-- { div#div1 } and press enter -->
+    <div id="div1"></div>
+
+    <!-- { p.class5 } and press enter -->
+    <p class="class5"></p>
+
+    <!-- { strong.class1.myclass.classXYZ.class2 } and press enter -->
+    <strong class="class1 myclass classXYZ class2"></strong> <!-- multiple classes inserted in single tag are seprated by spaces -->
+
+    <!-- { a#mylink.classX.classY } and press enter -->
+    <a href="" id="mylink" class="classX classY"></a>
+
+    <!-- { p.class7#idpx.class3*5 } and press enter -->
+    <p class="class7 class3" id="idpx"></p>
+    <!-- <p class="class7 class3" id="idpx"></p>
+    <p class="class7 class3" id="idpx"></p>
+    <p class="class7 class3" id="idpx"></p>
+    <p class="class7 class3" id="idpx"></p> --> <!-- THIS IS INVALID 
+    MULTIPLE TAGS CAN'T HAVE SAME ID -->
+
+    <!-- { p.class7.class3.classABC*7 } and press enter -->
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <p class="class7 class3 classABC"></p>
+    <!-- THIS IS COMPLETELY VALID -->
+    
+</body>
+</html>

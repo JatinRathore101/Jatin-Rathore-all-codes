@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+            /* Initialize the container as a flex box */
+            border: 1px solid red;
+            margin: 20px;
+            height: 350px;
+            width: 100%;
+        }
+
+        .item {
+            background-color: rgb(138, 138, 214);
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+        }
+
+        
+        
+        
+        /* flex properties for flexbox {container} */
+
+        /* flex direction */
+        #container1 {
+            /* flex-direction: row; (Default value of flex-direction is row) */
+            /* flex-direction: column;
+            flex-direction: row-reverse;*/
+
+            flex-direction: column-reverse;
+        }
+
+        /* flex wrap */
+        #container2 
+        {
+            /* flex-wrap: wrap; */
+            flex-wrap: wrap-reverse;
+
+            flex-flow: column-reverse wrap; 
+            /* flex-flow: = flex-direction flex-wrap; */
+        }
+
+        /* justify-content */
+        #container3{
+            justify-content: center;
+            /* justify-content will justify the content in horizontal direction */
+        }
+        /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+        /* align items */
+        #container4{
+            align-items: center;
+            /* align-items will justify the content in vertical direction */
+        }
+
+        #container5{
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+
+
+
+        #container7{flex-wrap: wrap;flex-direction: row-reverse;}
+        /* flex properties for flex items */
+
+        #container7 #item1{
+            /* Higher the order, later it shows up in the container */
+            order: 7;
+            flex-grow: 3;
+        }
+
+        #container7 #item2{
+            order: 0;
+            flex-grow: 2;
+        }
+
+        #container7 #item3{
+            order: -1;
+            flex-shrink: 3;
+        }
+
+        #container7 #item4{
+            order: 1;
+            flex-basis: 50px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+
+        #container7 #item5{
+            order: 100;
+        }
+
+        #container7 #item6{
+            flex: 2 2 50px;
+            /* flex: flex-grow flex-shrink flex-basis;     shorthand*/
+        }
+
+        #container7 #item7{
+            /* align-self: flex-start;
+            align-self: flex-end; */
+            align-self: center;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <h3>container 1</h3>
+    <div class="container" id="container1">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 2</h3>
+    <div class="container" id="container2">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 3</h3>
+    <div class="container" id="container3">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 4</h3>
+    <div class="container" id="container4">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 5</h3>
+    <div class="container" id="container5">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 6</h3>
+    <div class="container" id="container6">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+
+    <h3>container 7</h3>
+    <div class="container" id="container7">
+        <div class="item" id="item1">flex item 1</div>
+        <div class="item" id="item2">flex item 2</div>
+        <div class="item" id="item3">flex item 3</div>
+        <div class="item" id="item4">flex item 4</div>
+        <div class="item" id="item5">flex item 5</div>
+        <div class="item" id="item6">flex item 6</div>
+        <div class="item" id="item7">flex item 7</div>
+    </div>
+</body>
+
+</html>

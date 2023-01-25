@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- general CSS syntax         SELECTORS{PROPERTY,VALUE}      -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal & External CSS</title>
+    <!-- PRECEDENCE =>   INLINE > (INTERNAL and EXTERNAL)   => between INTERNAL and EXTERNAL whichever written afterwards, over above one
+    to modify this behaviours we may use { important! } keyword which makes the syntax non-overwritting -->
+
+    <!-- { link:CSS ENTER } -->
+    <link rel="stylesheet" href="tut11.css">    <!-- external CSS -->
+    
+    <style>                                     /* internal CSS */
+        p{background-color: rgb(255, 153, 0);color: rgb(255, 0, 0);}
+        #Liliput{color: rgb(30, 255, 0);}
+        .classODD{color: pink;}
+    </style>
+
+    <link rel="stylesheet" href="tut11_2.css">  <!-- external CSS more preferance-->
+</head>
+<body>
+    
+    <h3 class="classODD" id="head3">Lorem ipsum dolor sit, amet consectetur</h3>
+    
+    <p>nam cumque eum suscipit reprehenderit inventore sequi fuganobis corrupti molestiae! Praesentium vitae nulla est in. Odit sequi, dignissimos doloremque eius aliquam perferendis voluptatibus magni minus iste cum. Corporis dolor minima aut, dolorem facilis illo, qui laborum aliquam aspernatur velit modi. Ex voluptates</p>
+    
+    <p class="classODD" id="MANGO">excepturi distinctio, consequatur ratione atque eum esse reiciendis modi libero quidem nulla eos! Est perspiciatis inventore cum, quibusdam illo suscipit provident, sunt placeat minima dolorum modi provident exercitationem, ab soluta assumenda obcaecati laboriosam recusandae maiores. Hic cumque magni accusantium optio.</p>
+    
+    <h2>mollitia reprehenderit laudantium libero numquam et odit </h2>
+    
+    <!-- INLINE CSS MAX PREFEERANCE -->
+    <p class="classODD" id="PIG" style="background-color: rgb(101, 101, 172); color: rgb(0, 204, 255);">repellat nemo, temporibus numquam, rerum ad suscipit deserunt corporis excepturi doloremque placeat! Ex, sapiente <strong>HERE INLINE CSS OVERWRITES INTERNAL CSS</strong> voluptates? Explicabo, expedita fugiat! Quam nesciunt nisi ducimus perferendis molestias, quis corrupti porro dolorum blanditiis officia ipsa molestiae facilis quibusdam saepe similique possimus</p>
+    
+    <h2 id="Liliput">adipisicing elit. Provident, sapiente?</h2>
+    
+    <p class="classODD"> fugiat reiciendis, at voluptatum harum ad quibusdam voluptate ipsam impedit earum deleniti facilis. Recusandae adipisci natus possimus ratione rem! Doloribus, nisi? Fugit facere, reprehenderit</p>
+
+</body>
+</html>

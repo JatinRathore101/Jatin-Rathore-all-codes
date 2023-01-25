@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Input tags</title>
+</head>
+<body>
+    <h1>This is multi input form</h1>
+    <form action="backend.php"> <!-- place to store data -->
+        
+        
+        <div> <!-- div tag used here for breaking line , br tag is not recommanded -->
+            <label for="name">NAME:</label> <!-- due to this label just by clicking over NAME: option the user will directly directed to dialog box to enter name -->
+            <input type="text" name="myName" id="name"> <!-- input tag has no closing tag, it is capable of taking multiple type of data from the user -->
+        </div>
+        
+        <br>
+
+        <div> <!-- Note we have not set label for ROLL NUMBER: => clicking it will do nothing -->
+            ROLL NUMBER:<input type="text" name="myRoll"> <!-- input tag has no closing tag, it is capable of taking multiple type of data from the user -->
+        </div>
+        
+        <br>
+
+        <div>
+            EMAIL:<input type="email" name="myEmail"> <!-- name attribute is for the convinience of backend.php to understand -->
+        </div>
+
+        <br>
+
+        <div>
+            <label for="DOB">DOB:</label>
+                <input type="date" name="myDOB" id="DOB">
+        </div>
+        
+        <br>
+
+        <div>
+            CONTACT NUMBER:<input type="number" name="myNumber">
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="marrige">MARRIED?</label>  <input type="checkbox" name="maritial status" id="marrige">
+        </div>
+
+        <br>
+        <!-- {id attribute} of {input or other tags} must have same name as {for attribute} of {label tag} -->
+        <div>
+            GENDER: MALE<input type="radio" name="myGender" id="gender">  FEMALE<input type="radio" name="myGender" id="gender">  OTHER<input type="radio" name="myGender" id="gender"> <!-- since these three gender types share same name attribute ie. name="myGender" => only one at a time can be selected -->
+        </div>
+
+        <br>
+
+        <div>
+            <label for="profile">PROFILE:</label>
+            <select name="myProfile" id="profile">
+                <option value="sde">SOFTWARE DEVELOPER</option>
+                <option value="web">WEB AND APP DESIGNER</option>
+                <option value="ML AI" selected>ML ENGINEER</option>  <!-- selected makes ml engineer option selected as default case -->
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            WRITE ABOUT YOURSELF: <br><textarea name="myText" cols="50" rows="20"></textarea>           
+        </div>
+
+        <br>
+
+        <div>
+            <input type="reset" value="RESET NOW"> 
+            <input type="submit" value="SUBMIT NOW">
+        </div>
+        
+    </form>
+</body>
+</html>

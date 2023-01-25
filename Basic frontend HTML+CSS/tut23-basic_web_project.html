@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .navops {
+            display: inline-block;
+        }
+        
+
+        header div {
+            margin: 10px 0px;
+            padding: 0px;
+            height: 100px;
+            width: 100px;
+        }
+
+
+        #btn1 {
+            background-color: black;
+            color: white;
+            margin: 0px 10px;
+            border: none;
+            height: 60px;
+            font-size: 14px;
+        }
+
+        #btn1 img {
+            height: 30px;
+        }
+
+        #btn1:hover {
+            cursor: pointer;
+        }
+
+        #btn2 img {
+            height: 20px;
+        }
+
+        #nav1 {
+            margin: 10px 0px 10px 300px;
+        }
+
+        #nav5 {
+            margin: 10px 20px 10px 100px;
+            width: 200px;
+        }
+
+        #nav6 {
+            margin: 10px 20px 10px 50px;
+        }
+
+        header div button {
+            width: 90px;
+            height: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            border: none;
+            color: white;
+            background-color: black;
+        }
+
+        header div button:hover {
+            color: blue;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        #btn2 img:hover {
+            filter: invert(50%)
+        }
+
+        #nav5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+
+        #nav5 label:hover {
+            cursor: pointer;
+        }
+
+        #btn2 {
+            position: relative;
+            top: 4px;
+        }
+
+        .container {
+            border: 1px solid white;
+            margin: 1px 0px 500px 0px;
+        }
+
+        .container h1{text-align: center;}
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="navops" id="logodiv">
+            <button id="btn1" onclick="//">
+                <img id="homepic" src="project1_logo.png" alt="nueral_soft_LOGO">
+                <h4>Neural Soft</h4>
+            </button>
+        </div>
+
+
+        <div class="navops" id="nav1">
+            <button id="btn2" onclick="//">
+                <img src="project1_home.png" alt="Home">
+            </button>
+        </div>
+
+        <div class="navops" id="nav2"><button id="btn3" onclick="//">Services</button></div>
+
+        <div class="navops" id="nav3"><button id="btn4" onclick="//">About us</button></div>
+
+        <div class="navops" id="nav4"><button id="btn5" onclick="//">Contact us</button></div>
+
+        <div class="navops" id="nav5">
+            <label for="searchid">Search</label>
+            <input type="text" name="search" id="searchid" placeholder="Search">
+        </div>
+
+        <div class="navops" id="nav6"><button id="btn6" onclick="//">Login/Signup</button></div>
+
+
+
+    </header>
+
+    <div class="container">
+        <h1>JOIN NUERAL SOFT COMMUNITY</h1>
+        <h1>REGISTRATION FORM</h1>
+        <div class="form">
+            <p>Full Name <input type="text" placeholder="Enter your full name"></p>
+        </div>
+        <div class="form">
+            <p>Date of Birth <input type="text" placeholder="DD/MM/YYYY"></p>
+        </div>
+        <div class="form">
+            <p>City <input type="text" placeholder="Enter your city"></p>
+        </div>
+        <div class="form">
+            <p>Mobile Number <input type="text" placeholder="Enter your mobile number"></p>
+        </div>
+        <div class="form">
+            <p>Email address <input type="text" placeholder="Enter your email address"></p>
+        </div>
+        <div class="form"><button id="btn7" onclick="//">submit</button></div>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>Copyright © 2022 neuralsoft.com</p>
+        </div>
+        <div class="footer"><a href="//">Contact us</a></div>
+
+
+    </footer>
+
+</body>
+
+</html>

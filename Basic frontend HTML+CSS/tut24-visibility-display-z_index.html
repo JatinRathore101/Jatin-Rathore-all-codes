@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility,display,z-index</title>
+
+    <style>
+        *{box-sizing: border-box;margin: 0%;padding: 0%;}
+        .boxes{height: 150px;width: 150px;border: none;display: inline-block;text-align:center;}
+        
+        #box1{background-color: red;}
+        #box2{background-color: rgb(88, 255, 233);visibility: hidden;}
+        /* Visibility property is used to hide or show an HTML element without changing the layout of the page.
+    The hidden element uses the space on the page because it is still there, but it is not visible to the user. */
+
+        #box3{background-color: blue;}
+        #box4{background-color: yellow;display: none;}
+        /* display:none; - It completely removes an HTML tag from the web page like it was never there.
+    visibility:hidden;  - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page. */
+
+        #box5{background-color: orange;}
+        #box6{background-color: yellowgreen;position: relative;z-index: -1;left: 20px;}
+        #box7{background-color: rgb(146, 138, 146);position: relative;z-index: -20;}
+        #box8{background-color: rgb(1, 184, 16);position: relative;z-index:+7;right: 20px;}
+        /* whenever HTML elements collapse with each other, then the element with smaller z-index value will be covered by the element with larger z-index value. */
+        
+        #box9{background-color: gold;}
+        #box10{background-color: pink;}
+        #box11{background-color: magenta;}
+        #box12{background-color: rgb(188, 255, 188);}
+    </style>
+</head>
+
+<body>
+    <div class="boxes" id="box1">1</div>
+    <div class="boxes" id="box2">2</div>
+    <div class="boxes" id="box3">3</div>
+    <div class="boxes" id="box4">4</div>
+    <div class="boxes" id="box5">5</div>
+    <div class="boxes" id="box6">6</div>
+    <div class="boxes" id="box7">7</div>
+    <div class="boxes" id="box8">8</div>
+    <div class="boxes" id="box9">9</div>
+    <div class="boxes" id="box10">10</div>
+    <div class="boxes" id="box11">11</div>
+    <div class="boxes" id="box12">12</div>
+</body>
+</html>

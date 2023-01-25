@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+        .sameTXT{background-color: rgb(192, 143, 207);
+        border: 7px solid rgb(240, 107, 18);
+       /*  height: 35px; */}
+
+        #one{padding: 0%;margin: 0%;}
+
+        #two{padding: 70px;margin: 0%;}
+
+        #three{padding: 0%;margin: 70px;}
+
+        #four{padding: 70px; margin: 70px;}
+
+        #five{padding-left: 100px;
+        margin-top: 70px;margin-bottom: 70px;}
+
+        #six{padding: 200px 140px 80px 20px; /* order trbl -> top right bottom left */ 
+        margin: 20px 80px 140px 200px;}
+
+        #seven{padding: 50px 100px;  /* order -> { (top/bottom) (left/right) } -> ie { padding-Y padding-X } */
+        margin: 100px 50px;} /* same order as padding ie -> { margin-Y margin-X } */
+
+        #eight{padding: 80px;margin: 80px;width: 1000px;height: 80px;}
+
+        #nine{padding: 50px;margin: 50px;width: 1000px;height: 80px;box-sizing: border-box;}/* THATS WHY YOU SHOULD NOT FIX HIEGHT AND APPLY BOX SIZING => EXTRA TEXT WILL GO OUT OF THE BOX */
+        
+        #ten{padding: 100px;margin: 100px;width: 1000px;height: 80px;box-sizing: border-box;}
+
+        /*
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color:brown;
+        } 
+        */
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>CSS BOX MODEL</h2>
+
+    <hr>
+    
+    <p class="sameTXT" id="one">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+    
+    <hr>
+
+    <p class="sameTXT" id="two">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+    
+    <hr>
+
+    <p class="sameTXT" id="three">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="four">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="five">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="six">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="seven">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="eight">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="nine">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p>
+
+    <hr>
+
+    <p class="sameTXT" id="ten">Lorem ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing ipsum dolor sit amet consectetur adipisicing elit Ipsum et ex</p> 
+
+    <hr>
+
+    <img src="CSS-Box-Model.png" alt="CSS BOX MODEL">
+
+</body>
+</html>

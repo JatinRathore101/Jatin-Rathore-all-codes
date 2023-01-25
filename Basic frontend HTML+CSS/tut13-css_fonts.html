@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONTS IN CSS</title>
+
+    <!--    
+    WEB SAFE fonts => Preinstalled in computer
+    WEB fonts => to be imported from internet from other sites
+    -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Prosto+One&family=Rubik+Bubbles&display=swap'); </style>
+
+    <!-- fonts.google.com -->
+
+
+    <style>
+        
+        /* @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');  //  this method of import is ocal to the css file or css body, while above link tag is global to whole html file  //  */
+        /* You shoud avoid the use of @import because it will defer the loading of the included resource until the file is fetched. */
+
+
+        #para1{font-family: 'Ubuntu','Times New Roman',sans-serif;/* font-family is stack of fonts => if first not possible shift to second => if that too not present then shift to third and so on */
+        
+        font-family: 'Prosto One', cursive;
+
+        font-family: 'Rubik Bubbles', cursive;
+        
+        font-size: 50px;/* 1px is 1/96 of an inch */
+        font-style: italic;
+        }
+        
+        #para2{font-family: 'Times New Roman', Times, serif; 
+        font-weight: bold;
+        line-height: 10rem;}
+
+        .bgc{background-color: aqua;}
+
+        body{background-color: rgb(206, 163, 135);}
+    
+    </style>
+</head>
+<body>
+
+    <p class="bgc" id="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus nisi, quod unde odit praesentium tenetur rem dolore ab earum officia.</p>
+    
+    <p class="bgc" id="para2">GASHUCUIJS autem dolore IUCHUIOAD porro reiciend DCHIWDGBCI OICHUIDS is eligendi quasi sapiente nobis ratione veritatis minima repellat, totam ipsam voluptate.</p>
+
+</body>
+</html>
