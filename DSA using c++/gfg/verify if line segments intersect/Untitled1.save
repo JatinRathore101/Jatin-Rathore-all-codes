@@ -1,0 +1,573 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+
+class doubleList
+{
+    private:
+        double list[15];
+        int maxSize;
+    public:
+        doubleList()
+        {
+            maxSize=15; double w;
+            for(int i=0;i<15;i++)
+            {
+                while(true)
+                {
+                    cin>>w;
+                    if((-2000<=w<=2000)&&(i!=2))
+                    {
+                    list[i]=w;break;
+                    }
+                    if((0<w<=1000)&&(i==2))
+                    {
+                    list[i]=w;break;
+                    }
+                }
+            }
+        }
+        double* getList()
+        {
+            return list;
+        }
+};
+
+class boolList
+{
+    private:
+        bool list[3];
+    public:
+        boolList()
+        {
+            list[0]=list[1]=list[2]=0;
+        }
+        void setboolList(bool b1,bool b2,bool b3)
+        {
+            list[0]=b1;list[1]=b2;list[2]=b3;
+        }
+        void display()
+        {
+            for(int i=0;i<3;i++)
+            {
+                if(list[i]==true)
+                {
+                    cout<<"true ";
+                }
+                else
+                {
+                    cout<<"false ";
+                }
+            }
+        }
+};
+
+
+
+class boolMatrix
+{
+    private:
+        bool list[3][3];
+    public:
+        boolMatrix()
+        {
+            for(int i=0;i<3;i++)
+            {
+                for(int j=0;j<3;j++)
+                {
+                    list[i][j]=0;
+                }
+            }
+        }
+        void setboolMatrix(vector<bool> b)
+        {
+            int k=0;
+            for(int i=0;i<3;i++)
+            {
+                for(int j=0;j<3;j++)
+                {
+                    list[i][j]=b[k];k++;
+                }
+            }
+        }
+        void display()
+        {
+            for(int i=0;i<3;i++)
+            {
+                for(int j=0;j<3;j++)
+                {
+                    if(list[i][j]==true)
+                    {
+                        cout<<"true ";
+                    }
+                    else
+                    {
+                        cout<<"false ";
+                    }
+                }cout<<endl;
+            }
+
+        }
+};
+
+class point
+{
+    private:
+        double x;
+        double y;
+    public:
+        point()
+        {
+            x=y=0;
+        }
+        void setPoint(double X,double Y)
+        {
+            x=X;y=Y;
+        }
+        double getx()
+        {
+            return x;
+        }
+        double gety()
+        {
+            return y;
+        }
+};
+
+class circle
+{
+    private:
+        double r;
+        point ctr;
+    public:
+        circle()
+        {
+            r=0;
+            ctr.setPoint(0,0);
+        }
+        double getr()
+        {
+            return r;
+        }
+        point getctr()
+        {
+            return ctr;
+        }
+        void setr(double R)
+        {
+            r=R;
+        }
+        void setctr(point p)
+        {
+            ctr=p;
+        }
+        void setCircle(double R,point p)
+        {
+            setr(R);setctr(p);
+        }
+};
+
+class triangle{
+    private:
+        point A, B, C;
+    public:
+        triangle()
+        {
+            A.setPoint(0,0);
+            B.setPoint(0,0);
+            C.setPoint(0,0);
+        }
+        point getA()
+        {
+            return A;
+        }
+        point getB()
+        {
+            return B;
+        }
+        point getC()
+        {
+            return C;
+        }
+        void setA(point p)
+        {
+            A=p;
+        }
+        void setB(point p)
+        {
+            B=p;
+        }
+        void setC(point p)
+        {
+            C=p;
+        }
+        void setTriangle(point p1,point p2,point p3)
+        {
+            setA(p1);setB(p2);setC(p3);
+        }
+};
+
+class rectangle
+{
+    private:
+        point E,F,G,H;
+    public:
+        rectangle()
+        {
+            E.setPoint(0,0);
+            F.setPoint(0,0);
+            G.setPoint(0,0);
+            H.setPoint(0,0);
+        }
+        point getE()
+        {
+            return E;
+        }
+        point getF()
+        {
+            return F;
+        }
+        point getG()
+        {
+            return G;
+        }
+        point getH()
+        {
+            return H;
+        }
+        void setE(point p)
+        {
+            E=p;
+        }
+        void setF(point p)
+        {
+            F=p;
+        }
+        void setG(point p)
+        {
+            G=p;
+        }
+        void setH(point p)
+        {
+            H=p;
+        }
+        void setRectangle(point p1,point p2)
+        {
+            setE(p1);setG(p2);
+            p1.setPoint(E.getx(),G.gety());
+            setF(p1);
+            p2.setPoint(G.getx(),E.gety());
+            setH(p2);
+        }
+};
+
+bool pointInCircle(point p,circle C)
+{
+    double x=p.getx(),y=p.gety(),r=C.getr(),x1=C.getctr().getx(),y1=C.getctr().gety();
+    if(abs(sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1)))<=abs(r))
+    {
+        return true;
+    }
+    return false;
+
+}
+
+bool pointInTriangle(point p,triangle T)
+{
+    double x=p.getx(),y=p.gety(),x1=T.getA().getx(),y1=T.getA().gety(),x2=T.getB().getx(),y2=T.getB().gety(),x3=T.getC().getx(),y3=T.getC().gety();
+    if((((x-x1)*(y2-y1)-(y-y1)*(x2-x1))*((x3-x1)*(y2-y1)-(y3-y1)*(x2-x1)))>0)
+    {
+        if((((x-x2)*(y3-y2)-(y-y2)*(x3-x2))*((x1-x2)*(y3-y2)-(y1-y2)*(x3-x2)))>0)
+        {
+            if((((x-x3)*(y1-y3)-(y-y3)*(y1-y3))*((x2-x3)*(y1-y3)-(y2-y3)*(y1-y3)))>0)
+            {
+                return true;
+            }
+        }
+    }
+    else if(((x*(y1-y2)+x1*(y2-y)+x2*(y-y1))==0)&&(((x<=x1)&&(x>=x2))||((x>=x1)&&(x<=x2))))
+    {
+        return true;
+    }
+    else if(((x*(y3-y2)+x3*(y2-y)+x2*(y-y3))==0)&&(((x<=x3)&&(x>=x2))||((x>=x3)&&(x<=x2))))
+    {
+        return true;
+    }
+    else if(((x*(y1-y3)+x1*(y3-y)+x3*(y-y1))==0)&&(((x<=x1)&&(x>=x3))||((x>=x1)&&(x<=x3))))
+    {
+        return true;
+    }
+    /*else if(((x*(y1-y2)+x1*(y2-y)+x2*(y-y1))==0)||((x*(y3-y2)+x3*(y2-y)+x2*(y-y3))==0)||((x*(y1-y3)+x1*(y3-y)+x3*(y-y1))==0))
+    {
+        return true;
+    }*/
+    return false;
+}
+
+bool pointInRectangle(point p,rectangle R)
+{
+    double x=p.getx(),y=p.gety(),x1=R.getE().getx(),y1=R.getE().gety(),x2=R.getG().getx(),y2=R.getG().gety();
+    if(((x-x1)*(x-x2))<=0)
+    {
+        if(((y-y1)*(y-y2))<=0)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool circleIntersect(circle C1,circle C2)
+{
+    double r1=C1.getr(),x1=C1.getctr().getx(),y1=C1.getctr().gety(),r2=C2.getr(),x2=C2.getctr().getx(),y2=C2.getctr().gety();
+    if((abs(r1)+abs(r2))>=abs(sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))))
+    {
+        return true;
+    }
+    return false;
+}
+
+int orientation(point p1,point p2,point p3)
+{
+    double x1=p1.getx(),y1=p1.gety(),x2=p2.getx(),y2=p2.gety(),x3=p3.getx(),y3=p3.gety();
+    double val=(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2));
+        if(val==0)
+        {
+            return 0;
+        }
+        else if(val>0)
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+}
+
+bool onSegment(point A,point C,point B)
+{
+    // to check if C lies on AB
+    double x1=A.getx(),y1=A.gety(),x2=B.getx(),y2=B.gety(),x3=C.getx(),y3=C.gety();
+    if((x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))==0)
+    {
+        if((((x3-x1)*(x3-x2))<=0)&&(((y3-y1)*(y3-y2))<=0))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool segmentIntersect(point p1,point p2,point p3,point p4)
+{
+    // general case.
+    int o1,o2,o3,o4;
+    o1=orientation(p1,p2,p3);
+    o2=orientation(p1,p2,p4);
+    o3=orientation(p3,p4,p1);
+    o4=orientation(p3,p4,p2);
+    if((o1!=o2)&&(o3!=o4))
+    {
+        return true;
+    }
+
+    // special case
+    if((onSegment(p1,p3,p2)==true)||(onSegment(p1,p4,p2)==true)||(onSegment(p3,p1,p4)==true)||(onSegment(p3,p2,p4)==true))
+    {
+        return true;
+    }
+    return false;
+}
+
+bool triangleIntersect(triangle T1,triangle T2)
+{
+    point v1=T1.getA(),v2=T1.getB(),v3=T1.getC(),v4=T2.getA(),v5=T2.getB(),v6=T2.getC();
+    double c1x,c1y,c2x,c2y;
+    c1x=(v1.getx()+v2.getx()+v3.getx())/3;
+    c1y=(v1.gety()+v2.gety()+v3.gety())/3;
+    c2x=(v4.getx()+v5.getx()+v6.getx())/3;
+    c2y=(v4.gety()+v5.gety()+v6.gety())/3;
+    point c1,c2;c1.setPoint(c1x,c1y);c2.setPoint(c2x,c2y);
+    if((pointInTriangle(c1,T2))||(pointInTriangle(c2,T1)))
+    {
+        return true;
+    }
+    else if(segmentIntersect(v1,v2,v4,v5)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v1,v2,v5,v6)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v1,v2,v6,v4)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v2,v3,v4,v5)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v2,v3,v5,v6)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v2,v3,v6,v4)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v3,v1,v4,v5)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v3,v1,v5,v6)==true)
+    {
+        return true;
+    }
+    else if(segmentIntersect(v3,v1,v6,v4)==true)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool rectangleIntersect(rectangle R1,rectangle R2)
+{
+    if((pointInRectangle(R1.getE(),R2)==true)||(pointInRectangle(R1.getF(),R2)==true)||(pointInRectangle(R1.getG(),R2)==true)||(pointInRectangle(R1.getH(),R2)==true))
+    {
+        return true;
+    }
+    if((pointInRectangle(R2.getE(),R1)==true)||(pointInRectangle(R2.getF(),R1)==true)||(pointInRectangle(R2.getG(),R1)==true)||(pointInRectangle(R2.getH(),R1)==true))
+    {
+        return true;
+    }
+    
+    return false;
+}
+
+
+
+class geometry
+{
+    private:
+        point p;
+        triangle T;
+        rectangle R;
+        circle C;
+    public:
+        geometry(doubleList L)
+        {
+            auto it=L.getList();
+            p.setPoint(it[0],it[1]);
+            point p1,p2,p3,p4,p5,p6;
+            p1.setPoint(it[3],it[4]);
+            p2.setPoint(it[5],it[6]);
+            p3.setPoint(it[7],it[8]);
+            p4.setPoint(it[9],it[10]);
+            p5.setPoint(it[11],it[12]);
+            p6.setPoint(it[13],it[14]);
+            C.setCircle(it[2],p1);
+            T.setTriangle(p2,p3,p4);
+            R.setRectangle(p5,p6);
+        }
+        point getPoint()
+        {
+            return p;
+        }
+        circle getCircle()
+        {
+            return C;
+        }
+        triangle getTriangle()
+        {
+            return T;
+        }
+        rectangle getRectangle()
+        {
+            return R;
+        }
+        bool isPointLie()
+        {
+            if((pointInCircle(p,C)==true)&&(pointInTriangle(p,T)==true)&&(pointInRectangle(p,R)==true))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+};
+
+
+boolList areShapesIntersect(geometry, geometry);  // function prototype 
+boolMatrix areShapesBigger(geometry, geometry);   // function prototype
+// Note-1: Don't define any other functions for main(). 
+// Note-2: Don't make any changes in body of the main().
+int main()
+{
+    doubleList list1, list2;
+    geometry set1(list1), set2(list2);
+    bool Answer1 = set1.isPointLie();  // Is the point lie on the all closed geometric shapes in set-1?
+    bool Answer2 = set2.isPointLie();  // Is the point lie on the all closed geometric shapes in set-2?
+    boolList Answer3 = areShapesIntersect(set1, set2); // Are alike shapes in set1 and set2 intersect?
+    boolMatrix Answer4 = areShapesBigger(set1, set2);  // Are shapes in set1 bigger than set2?
+    cout << std::boolalpha;
+    cout<<Answer1<<endl; // display answer1 as boolean
+    cout<<Answer2<<endl; // display answer2 as boolean
+    Answer3.display();  // display answer3 as boolean list
+    cout<<endl;
+    Answer4.display(); // display answer3 as boolean matrix
+    return 0;
+}
+
+
+boolList areShapesIntersect(geometry set1, geometry set2)
+{
+    boolList Bl;
+    bool b1,b2,b3;
+    b1=circleIntersect(set1.getCircle(),set2.getCircle());
+    b2=triangleIntersect(set1.getTriangle(),set2.getTriangle());
+    b3=rectangleIntersect(set1.getRectangle(),set2.getRectangle());
+    Bl.setboolList(b1,b2,b3);
+    return Bl;
+}
+
+boolMatrix areShapesBigger(geometry set1, geometry set2)
+{
+    boolMatrix Mx;
+    vector<bool> b(9);
+    for(int i=0;i<9;i++){b[i]=false;}
+    circle C1,C2;triangle T1,T2;rectangle R1,R2;
+    C1=set1.getCircle();
+    C2=set2.getCircle();
+    T1=set1.getTriangle();
+    T2=set2.getTriangle();
+    R1=set1.getRectangle();
+    R2=set2.getRectangle();
+    double AC1,AC2,AT1,AT2,AR1,AR2;
+    AC1=(C1.getr())*(C1.getr())*3.141592653589793;
+    AC2=(C2.getr())*(C2.getr())*3.141592653589793;
+    double x1=T1.getA().getx(),y1=T1.getA().gety(),x2=T1.getB().getx(),y2=T1.getB().gety(),x3=T1.getC().getx(),y3=T1.getC().gety();
+    AT1=(abs((x2*y3-x3*y2)-(x1*y3-x3*y1)+(x1*y2-x2*y1)))/2;
+    x1=T2.getA().getx();y1=T2.getA().gety();x2=T2.getB().getx();y2=T2.getB().gety();x3=T2.getC().getx();y3=T2.getC().gety();
+    AT2=(abs((x2*y3-x3*y2)-(x1*y3-x3*y1)+(x1*y2-x2*y1)))/2;
+    x1=R1.getE().getx();y1=R1.getE().gety();x2=R1.getG().getx();y2=R1.getG().gety();
+    AR1=abs((x1-x2)*(y1-y2));
+    x1=R2.getE().getx();y1=R2.getE().gety();x2=R2.getG().getx();y2=R2.getG().gety();
+    AR2=abs((x1-x2)*(y1-y2));
+    if(AC1>AC2){b[0]=true;}
+    if(AC1>AT2){b[1]=true;}
+    if(AC1>AR2){b[2]=true;}
+    if(AT1>AC2){b[3]=true;}
+    if(AT1>AT2){b[4]=true;}
+    if(AT1>AR2){b[5]=true;}
+    if(AR1>AC2){b[6]=true;}
+    if(AR1>AT2){b[7]=true;}
+    if(AR1>AR2){b[8]=true;}
+    
+    Mx.setboolMatrix(b);
+    return Mx;
+}
