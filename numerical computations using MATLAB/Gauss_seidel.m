@@ -1,17 +1,20 @@
-function [X] = Gauss_seidel(A,B)
+function [X] = Gauss_seidel(A,B,niter)
 clc;
 n=size(B);
-X=zeros(n);
+X=[2;0;2;3];
 err=zeros(n);
 disp(' ');
 tol=10^(-5); % tolerance (max allowed error)
 
-
-for i=1:100
+round(X, 4, 'significant')
+    
+for i=1:niter
     Xold=X;
     for j=1:n   % for making expressions for X(i)
         X(j)=(B(j)-A(j,:)*X+A(j,j)*X(j))/A(j,j);
     end
+    round(X, 4, 'significant')
+    
     err=abs(X-Xold);
     disp(['X after ',num2str(i),' iteration'])
     disp(X');
@@ -20,9 +23,9 @@ for i=1:100
     disp(' ');
     disp(' ');
     disp(' ');
-    if (max(err)<tol)
-        break;
-    end
+%     if (max(err)<tol)
+%         break;
+%     end
     
 end
 

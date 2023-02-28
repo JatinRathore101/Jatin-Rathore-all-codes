@@ -1,6 +1,6 @@
 % This is an iteration method, we don't actually solve here, It may give
-% wrong answer also depending upon initial x1,x2, etc expressions formed
-% don;t converge;
+% wrong answer also depending upon initial x1,x2, etc, if the expressions
+% formed do not converge;
 
 %%
 clc;
